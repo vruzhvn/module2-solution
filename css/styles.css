@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+/*Main */
+.sports-section {
+    background-color: #e7e7e7;
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 32%; /* desktop */
+    float: left;
+    margin-right: 2%; /* Отступы */
+}
+
+.sports-section:last-child {
+    margin-right: 0;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+/* планшет */
+@media (max-width: 991px) and (min-width: 768px) {
+    .sports-section {
+        width: 48%; 
+        margin-right: 2%;
+    }
+
+    .sports-section:nth-child(3) {
+        width: 100%; 
+        margin-right: 0;
+    }
+}
+
+/*phone */
+@media (max-width: 767px) {
+    .sports-section {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .section-title {
+        font-size: 1.5em; 
+    }
+}

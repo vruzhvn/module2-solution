@@ -6,67 +6,58 @@
 
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 header {
+    background-color: #4CAF50;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 10px 0;
 }
 
-h1 {
-    font-size: 2.5em;
-    color: #333;
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-/*Main */
-.sports-section {
-    background-color: #e7e7e7;
-    border: 1px solid black;
+.menu-item {
+    border: 1px solid #000;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
     position: relative;
-    width: 32%; /* desktop */
-    float: left;
-    margin-right: 2%; /* Отступы */
+    background-color: #f2f2f2;
 }
 
-.sports-section:last-child {
-    margin-right: 0;
-}
-
-.section-title {
+/* Section title styling */
+.title {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #333;
-    color: white;
+    background-color: #FFA500;
     padding: 5px;
-    font-size: 1.2em;
 }
 
-/* планшет */
-@media (max-width: 991px) and (min-width: 768px) {
-    .sports-section {
-        width: 48%; 
-        margin-right: 2%;
-    }
-
-    .sports-section:nth-child(3) {
-        width: 100%; 
-        margin-right: 0;
-    }
-}
-
-/*phone */
+/* Responsive styles */
 @media (max-width: 767px) {
-    .sports-section {
+    .menu-item {
         width: 100%;
-        margin-right: 0;
     }
+}
 
-    .section-title {
-        font-size: 1.5em; 
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-item {
+        width: 48%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .menu-item {
+        width: 30%;
+        float: left;
     }
 }
